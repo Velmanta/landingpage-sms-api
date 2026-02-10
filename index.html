@@ -1,10 +1,288 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wtyczka SMS dla HubSpot | Velmanta</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: rgb(6, 1, 41);
+      --accent: #6b5cff;
+      --bg-light: #f6f7fb;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #111;
+      line-height: 1.6;
+      background: #fff;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--primary), #120a5a);
+      color: #fff;
+      padding: 80px 0 100px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 60px;
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 1.2rem;
+      letter-spacing: 0.5px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .hero h1 {
+      font-size: 2.6rem;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+      margin-bottom: 30px;
+    }
+
+    .cta {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      padding: 14px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    .hero-box {
+      background: rgba(255,255,255,0.08);
+      border-radius: 16px;
+      padding: 30px;
+      backdrop-filter: blur(6px);
+    }
+
+    section {
+      padding: 90px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .section-title h2 {
+      font-size: 2.2rem;
+      margin-bottom: 12px;
+    }
+
+    .section-title p {
+      color: #555;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    .feature {
+      background: var(--bg-light);
+      padding: 30px;
+      border-radius: 14px;
+    }
+
+    .feature h3 {
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+    }
+
+    .how {
+      background: #fafafa;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    .step {
+      padding: 30px;
+      border-radius: 14px;
+      border: 1px solid #e6e6ef;
+      background: #fff;
+    }
+
+    .step span {
+      display: inline-block;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+
+    .about {
+      background: linear-gradient(135deg, #f2f3ff, #ffffff);
+    }
+
+    .about-box {
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    footer {
+      background: var(--primary);
+      color: #cfd1ff;
+      padding: 50px 0;
+      text-align: center;
+    }
+
+    footer strong {
+      color: #fff;
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .features, .steps {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 2.1rem;
+      }
+    }
+  </style>
 </head>
 <body>
-$END$
+
+<header>
+  <div class="container">
+    <nav>
+      <div class="logo">Velmanta</div>
+      <div>Wtyczka SMS dla HubSpot</div>
+    </nav>
+
+    <div class="hero">
+      <div>
+        <h1>Automatyczne SMS-y bezpośrednio z HubSpot</h1>
+        <p>Zwiększ konwersję, popraw komunikację i docieraj do klientów szybciej dzięki profesjonalnej wtyczce SMS stworzonej przez Velmanta.</p>
+        <a href="#kontakt" class="cta">Umów demo</a>
+      </div>
+      <div class="hero-box">
+        <strong>Co zyskujesz?</strong>
+        <ul style="margin-top:15px; padding-left:18px;">
+          <li>✔ SMS-y transakcyjne i marketingowe</li>
+          <li>✔ Integracja 1‑klik z HubSpot</li>
+          <li>✔ Pełna automatyzacja workflow</li>
+          <li>✔ Wysyłka w czasie rzeczywistym</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="container">
+    <div class="section-title">
+      <h2>Dlaczego SMS w HubSpot?</h2>
+      <p>Bo wiadomości tekstowe nadal wygrywają z mailem</p>
+    </div>
+
+    <div class="features">
+      <div class="feature">
+        <h3>98% open rate</h3>
+        <p>SMS-y są czytane niemal natychmiast, bez ginęcia w skrzynce mailowej.</p>
+      </div>
+      <div class="feature">
+        <h3>Pełna automatyzacja</h3>
+        <p>Wyzwalaj wysyłkę SMS-ów na podstawie statusów, leadów i workflow.</p>
+      </div>
+      <div class="feature">
+        <h3>Jedno źródło danych</h3>
+        <p>Cała komunikacja zapisana bezpośrednio w rekordach HubSpot.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="how">
+  <div class="container">
+    <div class="section-title">
+      <h2>Jak to działa?</h2>
+      <p>3 proste kroki do wysyłki SMS-ów</p>
+    </div>
+
+    <div class="steps">
+      <div class="step">
+        <span>Krok 1</span>
+        <h3>Instalacja wtyczki</h3>
+        <p>Dodaj integrację SMS do swojego konta HubSpot w kilka minut.</p>
+      </div>
+      <div class="step">
+        <span>Krok 2</span>
+        <h3>Konfiguracja workflow</h3>
+        <p>Ustal kiedy, do kogo i z jaką treścią wysyłany jest SMS.</p>
+      </div>
+      <div class="step">
+        <span>Krok 3</span>
+        <h3>Automatyczna wysyłka</h3>
+        <p>System sam wysyła wiadomości i zapisuje je w HubSpot.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about">
+  <div class="container">
+    <div class="about-box">
+      <h2>O Velmanta</h2>
+      <p>Velmanta to firma technologiczna specjalizująca się w integracjach, automatyzacji i rozwiązaniach dla HubSpot. Tworzymy narzędzia, które realnie wspierają sprzedaż i obsługę klienta.</p>
+    </div>
+  </div>
+</section>
+
+<footer id="kontakt">
+  <div class="container">
+    <p><strong>Velmanta</strong> — Wtyczka SMS dla HubSpot</p>
+    <p style="margin-top:10px; font-size:0.9rem;">© 2026 Velmanta. Wszelkie prawa zastrzeżone.</p>
+  </div>
+</footer>
+
 </body>
 </html>
